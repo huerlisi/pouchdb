@@ -25,7 +25,7 @@ git checkout -b $BUILD_DIR
 # Update dependency versions inside each package.json (replace the "*")
 node bin/update-package-json-for-publish.js
 
-# Publish all modules with Lerna
+# Publish all modules
 for pkg in $(ls packages/node_modules); do
   if [ ! -d "packages/node_modules/$pkg" ]; then
     continue
